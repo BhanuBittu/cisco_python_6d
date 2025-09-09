@@ -1,43 +1,61 @@
-# Testing the repo.py file
-#from repo import create_employee, read_all_employees, read_by_id, update, delete_employee
 import repo
-employee = (101, 'bhanu', 22, 50000, True)
-repo.create_employee(employee)
-print(f'Employee {employee[1]} created successfully')
-print('After add:', repo.read_all_employees())
+def menu():
+    message ='''
+    '1. Create Employee'
+    '2. Read All Employees'
+    '3. Read Employee by ID'
+    '4. Update Employee'
+    '5. Delete Employee'
+    '6. Exit' 
+    Your choice: '''
+    choice = int(input(message))
+    if choice == 1:
+        id = int(input('ID: '))
+        name = input('Name: ')
+        age = int(input('Age: '))
+        salary = float(input('Salary: '))
+        is_active = input('Is Active (y/n): ').upper() == 'Y'
+        employee = (id, name, age, salary, is_active)
+        repo.create_employee(employee)
+        print(f'Employee {name} created successfully')
+    elif choice == 2:
+        employees = repo.read_all_employees()
+        if len(employees) == 0:
+            print('No employees found')
+        else:
+            for emp in employees:
+                print(emp)
+    elif choice == 3:
+        id = int(input('Enter Employee ID to search: '))
+        employee = repo.read_by_id(id)
+        if employee == None:
+            print(f'Employee with ID {id} not found')
+        else:
+            print(f'Employee found: {employee}')
+    elif choice == 4:
+        id = int(input('Enter Employee ID to update: '))
+        employee = repo.read_by_id(id)
+        if employee == None:
+            print(f'Employee with ID {id} not found')
+        else:
+            salary = float(input('Salary: '))
+            new_employee = (employee[0], employee[1], employee[2], salary, employee[4])
+            repo.update(id, new_employee)
+            print(f'Employee {employee[1]} updated successfully')
+    elif choice == 5:
+        id = int(input('Enter Employee ID to delete: '))
+        if repo.delete_employee(id):
+            print(f'Employee with ID {id} deleted successfully')
+        else:
+            print(f'Employee with ID {id} not found')
+    elif choice == 6:
+        print('Exiting the program')
+        exit(0)
+    else:
+        print('Invalid choice, please try again')
 
-employee = (102, 'mahesh', 25, 60000, True)
-repo.create_employee(employee)
-print(f'Employee {employee[1]} created successfully')
-print('After add:', repo.read_all_employees()) 
-
-employee = (103, 'suresh', 28, 70000, False)
-repo.create_employee(employee)
-print(f'Employee {employee[1]} created successfully')
-print('After add:', repo.read_all_employees())
-
-#test read by id
-employee = repo.read_by_id(102)
-if employee == None:
-    print(f'Employee not found')
-else:
-    print(f'Employee found: {employee}')
-
-#test update
-employee = repo.read_by_id(103)
-if employee == None:
-    print(f'Employee not found')
-else:
-    id, name, age, salary, is_active = employee
-    salary += 20000
-    new_employee = (id, name, age, salary, is_active)
-    repo.update(103, new_employee)
-    print(f'Employee {name} updated successfully')
-    print('After update:', repo.read_all_employees())
-
-#test delete
-repo.delete_employee(102)
-print(f'Employee 102 deleted successfully')
-print('After delete:', repo.read_all_employees())
-
-# Make as app
+def menus():
+    while True:
+        choice = menu()
+        print('-----------------------------------')
+menus()
