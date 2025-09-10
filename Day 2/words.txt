@@ -1,0 +1,2 @@
+List: ['Hello', 'Everyone', 'How', 'are', 'you', 'all']
+Tuple: ('Hello', 'Everyone', 'How', 'are', 'you', 'all')

@@ -1,0 +1,2 @@
+Sum of the list: 45
+Average of the list: 4.5

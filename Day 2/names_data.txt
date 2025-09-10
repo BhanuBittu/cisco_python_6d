@@ -1,0 +1,2 @@
+List of names: ['Bhanu', 'Maheswaran', 'Manikanth', 'Meghana']
+Tuple of names: ('Bhanu', 'Maheswaran', 'Manikanth', 'Meghana')
