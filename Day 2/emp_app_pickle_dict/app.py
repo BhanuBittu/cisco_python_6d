@@ -1,4 +1,4 @@
-import repo
+import repo_pickle_dict as repo
 def menu():
     message ='''
     '1. Create Employee'
@@ -15,7 +15,7 @@ def menu():
         age = int(input('Age: '))
         salary = float(input('Salary: '))
         is_active = input('Is Active (y/n): ').upper() == 'Y'
-        employee = (id, name, age, salary, is_active)
+        employee = {'ID':id, 'Name':name , 'Age':age, 'Salary':salary, 'Is Active':is_active}
         repo.create_employee(employee)
         print(f'Employee {name} created successfully')
     elif choice == 2:
@@ -39,9 +39,9 @@ def menu():
             print(f'Employee with ID {id} not found')
         else:
             salary = float(input('Salary: '))
-            new_employee = (employee[0], employee[1], employee[2], salary, employee[4])
+            new_employee = {'ID':employee['ID'], 'Name':employee['Name'], 'Age':employee['Age'], 'Salary':salary, 'Is Active':employee['Is Active']}
             repo.update(id, new_employee)
-            print(f'Employee {employee[1]} updated successfully')
+            print(f'Employee {employee["Name"]} updated successfully')
     elif choice == 5:
         id = int(input('Enter Employee ID to delete: '))
         if repo.delete_employee(id):
