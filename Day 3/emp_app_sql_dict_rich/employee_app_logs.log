@@ -1,0 +1,73 @@
+2025-09-15 20:53:39,548 [INFO] BEGIN (implicit)
+2025-09-15 20:53:39,548 [INFO] PRAGMA main.table_info("employees")
+2025-09-15 20:53:39,548 [INFO] [raw sql] ()
+2025-09-15 20:53:39,549 [INFO] COMMIT
+2025-09-15 20:53:45,755 [INFO] BEGIN (implicit)
+2025-09-15 20:53:45,755 [INFO] PRAGMA main.table_info("employees")
+2025-09-15 20:53:45,755 [INFO] [raw sql] ()
+2025-09-15 20:53:45,755 [INFO] COMMIT
+2025-09-15 20:53:58,324 [INFO] BEGIN (implicit)
+2025-09-15 20:53:58,327 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-15 20:53:58,327 [INFO] [generated in 0.00034s] (101, 'bhanu', 22, 10000.0, 1)
+2025-09-15 20:53:58,329 [INFO] COMMIT
+2025-09-15 20:53:58,330 [INFO] employee created.
+2025-09-15 20:54:51,327 [INFO] BEGIN (implicit)
+2025-09-15 20:54:51,331 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-15 20:54:51,331 [INFO] [generated in 0.00034s] ()
+2025-09-15 20:54:51,332 [INFO] read all employees.
+2025-09-15 20:55:02,299 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-15 20:55:02,299 [INFO] [cached since 63.97s ago] (102, 'arun', 23, 10000.0, 1)
+2025-09-15 20:55:02,300 [INFO] COMMIT
+2025-09-15 20:55:02,302 [INFO] employee created.
+2025-09-15 20:55:03,727 [INFO] BEGIN (implicit)
+2025-09-15 20:55:03,727 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-15 20:55:03,727 [INFO] [cached since 12.4s ago] ()
+2025-09-15 20:55:03,728 [INFO] read all employees.
+2025-09-15 20:56:35,872 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 20:56:35,874 [INFO] [generated in 0.00201s] (102, 1, 0)
+2025-09-15 20:56:35,875 [INFO] read employee model.
+2025-09-15 20:56:35,876 [INFO] read employee for given id.
+2025-09-15 20:56:40,899 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 20:56:40,900 [INFO] [cached since 5.028s ago] (101, 1, 0)
+2025-09-15 20:56:40,900 [INFO] read employee model.
+2025-09-15 20:56:40,900 [INFO] read employee for given id.
+2025-09-15 20:56:54,929 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 20:56:54,930 [INFO] [cached since 19.06s ago] (101, 1, 0)
+2025-09-15 20:56:54,931 [INFO] read employee model.
+2025-09-15 20:56:54,933 [INFO] UPDATE employees SET salary=? WHERE employees.id = ?
+2025-09-15 20:56:54,933 [INFO] [generated in 0.00027s] (50000.0, 101)
+2025-09-15 20:56:54,934 [INFO] COMMIT
+2025-09-15 20:56:54,936 [INFO] employee salary updated.
+2025-09-15 20:56:56,421 [INFO] BEGIN (implicit)
+2025-09-15 20:56:56,421 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-15 20:56:56,421 [INFO] [cached since 119.3s ago] ()
+2025-09-15 20:56:56,422 [INFO] read all employees.
+2025-09-15 20:57:09,640 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 20:57:09,640 [INFO] [cached since 33.77s ago] (102, 1, 0)
+2025-09-15 20:57:09,641 [INFO] read employee model.
+2025-09-15 20:57:09,641 [INFO] read employee for given id.
+2025-09-15 20:57:09,642 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 20:57:09,642 [INFO] [cached since 33.77s ago] (102, 1, 0)
+2025-09-15 20:57:09,642 [INFO] read employee model.
+2025-09-15 20:57:09,643 [INFO] DELETE FROM employees WHERE employees.id = ?
+2025-09-15 20:57:09,643 [INFO] [generated in 0.00024s] (102,)
+2025-09-15 20:57:09,644 [INFO] COMMIT
+2025-09-15 20:57:09,646 [INFO] employee deleted.

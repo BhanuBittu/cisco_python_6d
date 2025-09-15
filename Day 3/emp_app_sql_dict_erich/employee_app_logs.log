@@ -1,0 +1,10 @@
+2025-09-15 22:22:38,267 [INFO] BEGIN (implicit)
+2025-09-15 22:22:38,269 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-15 22:22:38,269 [INFO] [generated in 0.00029s] (101, 'bhan', 12, 2121212.0, 1)
+2025-09-15 22:22:38,271 [INFO] COMMIT
+2025-09-15 22:22:38,272 [INFO] employee created.
+2025-09-15 22:22:44,501 [INFO] BEGIN (implicit)
+2025-09-15 22:22:44,503 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-15 22:22:44,503 [INFO] [generated in 0.00015s] ()
+2025-09-15 22:22:44,503 [INFO] read all employees.
