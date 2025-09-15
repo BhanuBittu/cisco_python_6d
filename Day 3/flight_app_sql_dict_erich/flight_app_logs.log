@@ -1,0 +1,5 @@
+2025-09-15 23:21:10,840 [INFO] BEGIN (implicit)
+2025-09-15 23:21:10,843 [INFO] SELECT flights.id AS flights_id, flights.flight_number AS flights_flight_number, flights.airline AS flights_airline, flights.capacity AS flights_capacity, flights.price AS flights_price, flights.source AS flights_source, flights.destination AS flights_destination 
+FROM flights
+2025-09-15 23:21:10,844 [INFO] [generated in 0.00035s] ()
+2025-09-15 23:21:10,845 [INFO] read all flights.
