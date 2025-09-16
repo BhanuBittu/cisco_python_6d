@@ -6,7 +6,7 @@ from .exc import FlightNotFoundError, FlightAlreadyExistError, DatabaseError
 
 def create_flight(flight):
     try:
-        flight_id = Flight(flight_id = flight['id'],
+        flight_id = Flight(flight_id = flight['flight_id'],
             flight_number = flight['flight_number'],
             airline = flight['airline'],
             capacity = flight['capacity'],
