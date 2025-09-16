@@ -1,3 +1,3 @@
-config = {
-    'DB_URL' : 'sqlite:///employee_app_db.db'
-}
+app_password = "hsajezwkhnvdfuzb "
+from_address = "bhanubittu99@gmail.com"
+to_address = "gmaheswaranmca@gmail.com"
